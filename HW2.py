@@ -56,7 +56,7 @@ for i in np.arange(1, DataSize):
     x = Predictions[i - 1]                                          
     z = Observations[i]                                             
     u = -w**2 * x[0:2]
-    #Implement a Kalman filter, I recommend using the wiki article and trying to write the math into the code, you need to implement the Prediction and Update steps
+
    
     x_priori = np.dot(F, x) + np.dot(B, u)
     P_priori = np.dot(np.dot(F, P), F.T) + Q
